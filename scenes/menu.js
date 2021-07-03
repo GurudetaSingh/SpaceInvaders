@@ -1,9 +1,11 @@
+// Menu
 add([
 		text("Space Invaders"),
 		pos(100, 70),
 		scale(3),
 	]);
 
+  // Easy
 	add([
 		rect(80, 20),
 		pos(220, 130),
@@ -19,6 +21,7 @@ add([
 		color(0, 0, 0)
 	]);
 
+  // Medium
   add([
 		rect(80, 20),
 		pos(220, 170),
@@ -34,6 +37,7 @@ add([
 		color(0, 0, 0)
 	]);
 
+  // Hard
   add([
 		rect(80, 20),
 		pos(220, 210),

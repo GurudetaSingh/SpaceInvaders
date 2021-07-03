@@ -7,6 +7,7 @@ const BULLET_SPEED = 400
 
 layer(['obj', 'ui'], 'obj')
 
+// Adds levels
 addLevel([
   '!^^^^^^^^^^^^    &',
   '!^^^^^^^^^^^^    &',
@@ -29,6 +30,7 @@ addLevel([
   '&' : [ sprite('wall'), 'right-wall'],
 })
 
+// Adds space-ship and horizontal movement
 const player = add([
   sprite('space-ship'),
   pos(width() / 2, height() / 2),
@@ -64,6 +66,7 @@ action('bullet', (b) => {
   }
 })
 
+// Checks if bullet hits space invader
 collides('bullet', 'space-invader', (b,s) => {
   camShake(4)
   destroy(b)
@@ -76,6 +79,7 @@ collides('bullet', 'space-invader', (b,s) => {
   }
 })
 
+// Adds score
 const score = add([
   text('0'),
   pos(45, 50),
@@ -86,6 +90,7 @@ const score = add([
   }
 ])
 
+// Adds timer
 const timer = add([
   text('0'),
   pos(100,50),
@@ -96,7 +101,6 @@ const timer = add([
   },
 ])
 
-
 timer.action(() =>  {
   timer.time -= dt()
   timer.text = timer.time.toFixed(2)
@@ -105,6 +109,7 @@ timer.action(() =>  {
   }
 })
 
+// Adds movement for space invaders
 action('space-invader', (s) => {
   s.move(CURRENT_SPEED, 0)
 })

@@ -1,3 +1,4 @@
+// Displays final score
 add([
   text(args.score),
   origin('center'),

@@ -1,3 +1,4 @@
+// Victory scene
 add([
   text('YOU WIN!'),
   origin('center'),
